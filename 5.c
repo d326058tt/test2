@@ -1,10 +1,15 @@
-#include "map.h"
+//#include "map.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
 #include <assert.h>
 
+typedef struct map {
+	int key[1024];
+	char value[1024][127];
+	int count;
+} Map ;
 void init(Map *map){
 	int i,j;
 	map->count=0;
